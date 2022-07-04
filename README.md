@@ -6,4 +6,4 @@
 
 > The flag icons have been copied from [here](https://www.quackit.com/character_sets/emoji/emoji_v3.0/unicode_emoji_v3.0_characters_flags.cfm)
 
-> See code [here](https://github.com/iurianu/js-code-pieces/tree/main/Phone%20Input%20with%20Dropdown)
+> See code [here](https://github.com/iurianu/js-code-pieces/blob/main/Code/phone-input-with-dropdown.html)

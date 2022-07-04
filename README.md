@@ -1,6 +1,6 @@
 # Javascript Code Samples
 
-## Phone input with Country Dropdown
+## Simple Phone input with Country Dropdown
 
 > Created with [this tutorial](https://www.youtube.com/watch?v=hSc-B54iVVo), with Twitter Bootstrap 5
 

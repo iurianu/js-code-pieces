@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Use pattern Regex on `tel` Input to create placeholder, and HTML validation</title>
+		<link 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+			rel="stylesheet" 
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+			crossorigin="anonymous" 
+		/>
+		<style>
+			fieldset.form-control {
+				max-width: fit-content;
+			}
+			input.form-control {
+				width: auto;
+				letter-spacing: .25ch;
+			}
+		</style>
+	</head>
+
+	<body class="container-fluid">
+
+		<header class="row mb-5 mt-3">
+			<h1 class="text-center">Use pattern Regex on `tel` Input to create placeholder, and HTML validation </h1>
+		</header>
+
+		<main class="d-flex flex-column">
+
+			<blockquote>
+				This script can be used for converting a pattern from a <em class='text-danger'>tel</em> input to a placeholder, or a mask.
+				<br>
+				The script also makes number format validation, and helps the user by automatically adding dashes.
+			</blockquote>
+
+			<br>
+			<br>
+
+			<fieldset class='form-control'>
+
+				<label for='tel-input'>Telephone: </label>
+
+				<input class='form-control' id='tel-input' type='tel' />
+
+				<br>
+
+				<button type='submit' class='btn btn-success float-end'>Submit</button>
+
+			</fieldset>
+
+		</main>
+
+<aside class="scripts d-none">
+
+<script 
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+	crossorigin="anonymous">		
+</script>
+
+<script>
+
+	document.addEventListener('load', getInputAttributes())
+
+	function getInputAttributes() {
+
+		// Function Initial Values //
+
+		const input = document.querySelector('#tel-input'),
+			  pattern = '[0-9]{3}-[0-9]{3}-[0-9]{4}',
+			  patternLength = pattern.length
+
+		const placeholder = ''
+
+		// Function Working Values //
+
+		let firstMatch = pattern.match(/\{(.*?)\}/)[1],
+			firstIndex = pattern.indexOf(firstMatch)
+
+		let secondPattern = pattern.slice(firstIndex + 3),
+			  secondMatch = secondPattern.match(/\{(.*?)\}/)[1],
+			  secondIndex = secondPattern.indexOf(secondMatch)
+
+		let thirdPattern = secondPattern.slice(secondIndex + 3),
+			  thirdMatch = thirdPattern.match(/\{(.*?)\}/)[1],
+			  thirdIndex = thirdPattern.indexOf(thirdMatch)
+
+
+		console.log('pattern length: ', patternLength)	// 26
+		console.log('first match: ', firstMatch)		// 3
+		console.log('first index: ', firstIndex)		// 6
+		console.log('second pattern: ', secondPattern)	// [0-9]{3}-[0-9]{4}
+		console.log('second match: ', secondMatch)		// 3
+		console.log('second index: ', secondIndex)		// 6
+		console.log('third pattern: ', thirdPattern)	// [0-9]{4}
+		console.log('third match: ', thirdMatch)		// 4
+		console.log('third index: ', thirdIndex)		// 6
+
+		// Build the Placeholder //
+
+		let set = '',
+			firstSet = '',
+			secondSet = '',
+			thirdSet = ''
+
+		while (firstSet.length < parseInt(firstMatch)) {firstSet += '_'}
+		while (secondSet.length < parseInt(secondMatch)) {secondSet += '_'}
+		while (thirdSet.length < parseInt(thirdMatch)) {thirdSet += '_'}
+
+		set = set.concat(firstSet + '-' + secondSet + '-' + thirdSet)
+
+		console.log('set: ', set)
+		console.log('set length: ', set.length)
+
+		// Function Returns //
+
+		input.setAttribute('pattern', pattern)
+		input.setAttribute('placeholder', set)
+		input.setAttribute('maxlength', set.length)
+
+		// Generate the Values Required for the Format Validation //
+
+		const firstSplit = parseInt(firstMatch),
+			 secondSplit = parseInt(firstMatch) + parseInt(secondMatch) + 1
+
+		console.log('first split: ', firstSplit)
+		console.log('second split: ', secondSplit)
+
+		// Add Dashes Automatically while the User Types the Number //
+
+		input.addEventListener('keyup', function(e) {
+			console.log('input value: ', input.value)
+
+			if (event.key != 'Backspace' &&  (input.value.length === firstSplit || input.value.length === secondSplit)) {
+		      	input.value += '-';
+		    }
+		})
+
+	}
+
+</script>
+
+</aside>
+
+	</body>
+</html>

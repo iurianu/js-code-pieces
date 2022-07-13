@@ -9,7 +9,6 @@
 - [Simple Phone input with Country Dropdown](https://github.com/iurianu/js-code-pieces#simple-phone-input-with-country-dropdown)
 
 ---------
-
 ---------
 
 ## Use pattern Regex on `tel` Input to create placeholder, and HTML validation 

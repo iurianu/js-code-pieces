@@ -4,11 +4,19 @@
 
 > `All code in this repository is free to use by anyone, without limitations`
 
+### Contents
+- [Use pattern Regex on `tel` Input to create placeholder, and HTML validation](https://github.com/iurianu/js-code-pieces#use-pattern-regex-on-tel-input-to-create-placeholder-and-html-validation)
+- [Simple Phone input with Country Dropdown](https://github.com/iurianu/js-code-pieces#simple-phone-input-with-country-dropdown)
+
+---------
+
+---------
+
 ## Use pattern Regex on `tel` Input to create placeholder, and HTML validation 
 
 ### Code
 
-> See code [here](pattern-regex-on-tel-input.html)
+> See code [here](https://github.com/iurianu/js-code-pieces/blob/main/Code/pattern-regex-on-tel-input.html)
 
 ### Resources
 
@@ -18,7 +26,7 @@
 
 ### Code
 
-> See code [here](phone-input-with-dropdown.html)
+> See code [here](https://github.com/iurianu/js-code-pieces/blob/main/Code/phone-input-with-dropdown.html)
 
 ### Resources
 

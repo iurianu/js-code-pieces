@@ -1,5 +1,9 @@
 # Javascript Code Samples
 
+## Statement
+
+> `All code in this repository is free to use by anyone, without limitations`
+
 ## Use pattern Regex on `tel` Input to create placeholder, and HTML validation 
 
 ### Code

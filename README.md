@@ -8,7 +8,7 @@
 
 ### Code
 
-> See code [here](https://github.com/iurianu/js-code-pieces/blob/main/Code/pattern-regex-on-tel-input.html)
+> See code [here](pattern-regex-on-tel-input.html)
 
 ### Resources
 
@@ -18,7 +18,7 @@
 
 ### Code
 
-> See code [here](https://github.com/iurianu/js-code-pieces/blob/main/Code/phone-input-with-dropdown.html)
+> See code [here](phone-input-with-dropdown.html)
 
 ### Resources
 

@@ -19,7 +19,7 @@
 
 ### Resources
 
-> [Add Dashes to Phone Input](https://codepen.io/alphaborel/pen/GxVGpR?fbclid=IwAR2dAI5Go2E_w-9MkEASVSs_nTl2osPRmU9IoCeh6IQdKAIqneMXhvR8hOs) - a tutorial to let the user see the dashes in the `tel` input while typing, so he/she can keep the allowed formatting
+> [Add Dashes to Phone Input](https://codepen.io/alphaborel/pen/GxVGpR?fbclid=IwAR2dAI5Go2E_w-9MkEASVSs_nTl2osPRmU9IoCeh6IQdKAIqneMXhvR8hOs) - a codepen with a script that lets the user see the dashes in the `tel` input while typing, so he/she can keep the allowed formatting
 
 ## Simple Phone input with Country Dropdown
 
